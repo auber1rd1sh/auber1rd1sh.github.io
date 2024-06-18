@@ -139,7 +139,176 @@ h1, h2, h3, h4, h5, h6 {
     padding-inline: 40px;
 }
 
+.main__trendingnow {
+    width: 100%;
+}
+
+.main__trendingnow-title {
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.main__trendingnow-title::after {
+    position: absolute;
+    content: "";
+    width: 66px;
+    height: 3px;
+    background-color: var(--color-light-accent);
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main__trendingnow-article {
+    position: relative;
+    background-color: var(--color-dark);
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+    background-size: cover;
+    padding-top: 84px;
+    padding-bottom: 12px;
+    padding-inline: 15px;
+    margin-bottom: 2px;
+}
+
+.main__trendingnow-article::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.main__trendingnow-article_garden {
+    background-image: url("../images/trend1.jpg");
+}
+
+.main__trendingnow-article_cheese {
+    background-image: url("../images/trend2.jpg");
+    padding-top: 65px;
+}
+
+.main__trendingnow-article_hike {
+    background-image: url("../images/trend3.jpg");
+}
+
+.main__trendingnow-article_lemons {
+    background-image: url("../images/trend4.jpg");
+    margin-bottom: 0;
+}
+
+.main__trendingnow-article-container {
+    box-sizing: border-box;
+    position: relative;
+    border: 2px solid var(--color-accent);
+    z-index: 3;
+    padding-block: 30px;
+    padding-left: 22px;
+    padding-right: 35px;
+}
+
+.article-tagslist__item {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.tagslist__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.tagslist__link:hover {
+    text-decoration: underline;
+  }
+
+.main__article-title {
+    font-size: 16px;
+    line-height: 1.25;
+    position: relative;
+    z-index: 3;
+    margin-top: 14px;
+}
+
+.article-title__link {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+.article-title__link:hover {
+    color: var(--color-accent);
+  }
+
+@media (max-width: 640px) and (orientation: landscape) {
+    .app {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 3px;
+    }
+
+    .main__trendingnow-article {
+        padding-top: 94px;
+        padding-inline: 17px;
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+    .app {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 3px;
+    }
+
+    .main__trendingnow-article {
+        padding-top: 94px;
+        padding-inline: 17px;
+        width: calc(100%/2 - 35.5px);
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+    .app {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        gap: 3px;
+
+        word-wrap: break-word;
+    }
+
+    .main__trendingnow-article {
+        padding-top: 94px;
+        padding-inline: 17px;
+        width: calc(100%/4 - 36.3px);
+        margin-bottom: 0;
+    }
+}
+
 @media (min-width: 768px) {
+    .header {
+         background-image: url("../images/banner-bg-tablet.jpg");
+    }
+    
     .header__container {
         flex-direction: row;
         justify-content: space-between;
@@ -166,9 +335,28 @@ h1, h2, h3, h4, h5, h6 {
         padding-bottom: 120px;
         padding-inline: 80px;
     }
+
+    .main__trendingnow-title {
+        font-size: 18px;
+        margin-top: 45px;
+        margin-bottom: 30px;
+    }
+
+    .main__trendingnow-article_cheese {
+        padding-top: 70px;
+    }
+
+    .main__article-title {
+        font-size: 17px;
+        line-height: 1.3;
+    }
 }
 
 @media (min-width: 1200px) {
+    .header {
+        background-image: url("../images/banner-bg.jpg");
+   }
+
     .header__burger-button {
         display: none;
     }
