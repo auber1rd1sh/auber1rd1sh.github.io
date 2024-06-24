@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <input type="checkbox" id="popup1" class="popup-toggle visually-hidden">
+    <div class="popup">
+        <div class="popup__content">
+            <label for="popup1" class="popup__close">&times;</label>
+                <h2 class="popup__title">Ваш фидбек</h2>
+                <form class="popup__form">
+                    <label for="frequency" class="popup__form-select-label">Как часто вы заходите на сайт?</label>
+                    <select class="popup__form-select-frequency" id="frequency" name="frequency">
+                      <option value="almost every day">Почти каждый день</option>
+                      <option value="Once every few days">Раз в несколько дней</option>
+                      <option value="Once every few weeks">Раз в несколько недель</option>
+                      <option value="Several times a year">Несколько раз в год</option>
+                    </select>
+
+                    <p class="popup__form-radio-text">Вы подписаны на e-mail рассылку?</p>
+                    <input type="radio" id="Yes" class="popup__form-radio-toggle" name="choice"/>
+                    <label for="Yes" class="popup__form-radio-label">Да</label>
+                    
+                    <input type="radio" id="No" class="popup__form-radio-toggle" name="choice"/>
+                    <label for="No" class="popup__form-radio-label">Нет</label><br>
+
+                    <label class="popup__form-opinion-label" for="opinion">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+                    <textarea class="popup__form-opinion-textarea" id="opinion" name="opinion" placeholder="Может, больше рецептов?"></textarea>
+
+                    <button type="submit" action="#0" class="popup__form-button">Отправить</button>
+                </form>    
+        </div>
+    </div>
     <header class="header">
         <div class="header__container">
         <button class="header__burger-button" type="button">
@@ -255,7 +283,15 @@
             </div> 
         <section class="main__ourproducts">
             <h2 class="main__ourproducts-title">Наши изделия</h2> 
+            <div class="main__ourproducts-container">
             <article class="main__ourproducts-article main__ourproducts-article_pillow">
+                <picture class="main__ourproducts-image">
+                    <source media="(min-width: 1200px)"  
+                       srcset="images/shop-item-desk1.jpg">
+                    <source media="(min-width: 768px)"
+                       srcset="images/shop-item-tablet1.jpg">
+                    <img class="main__ourproducts-image" src="images/shop-item-mobile1.jpg" alt="Pillow">
+                </picture>
                 <div class="wrapper">
                     <h3 class="main__ourproducts-article-title"><a href="#0" class="ourproducts-article-title__link">Подушки на диван</a></h3>
                     <p class="main__ourproducts-article-text">Набор из двух подушек в с модными принтами. Видео о создании <a href="#0" class="ourproducts-article__link">здесь</a>.</p>
@@ -266,10 +302,17 @@
                         </div>
                         <button class="product__button" type="button">В магазин</button>
                     </div>
-                </div>
+            </div>
             </article>
 
             <article class="main__ourproducts-article main__ourproducts-article_doll">
+                <picture class="main__ourproducts-image">
+                    <source media="(min-width: 1200px)"  
+                       srcset="images/shop-item-desk2.jpg">
+                    <source media="(min-width: 768px)"
+                       srcset="images/shop-item-tablet2.jpg">
+                    <img class="main__ourproducts-image" src="images/shop-item-mobile2.jpg" alt="Bunny doll">
+                </picture>
                 <div class="wrapper">
                     <h3 class="main__ourproducts-article-title"><a href="#0" class="ourproducts-article-title__link">Кукла «Зайчик»</a></h3>
                     <p class="main__ourproducts-article-text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0" class="ourproducts-article__link">весенняя серия постов</a> в блоге и несколько подкастов.</p>
@@ -283,6 +326,13 @@
             </article>
 
             <article class="main__ourproducts-article main__ourproducts-article_frame">
+                <picture class="main__ourproducts-image">
+                    <source media="(min-width: 1200px)"  
+                       srcset="images/shop-item-desk3.jpg">
+                    <source media="(min-width: 768px)"
+                       srcset="images/shop-item-tablet3.jpg">
+                    <img class="main__ourproducts-image" src="images/shop-item-mobile3.jpg" alt="Hexagonal frame">
+                </picture>
                 <div class="wrapper">
                     <h3 class="main__ourproducts-article-title"><a href="#0" class="ourproducts-article-title__link">Шестиугольная рамка</a></h3>
                     <p class="main__ourproducts-article-text">Необычная рамка для украшения дома из видео <a href="#0" class="ourproducts-article__link">«Как сделать рамку из подручных средств за 30 минут»</a>.</p>
@@ -295,7 +345,18 @@
                     </div>
                 </div>
             </article>
+        </div>
         </section>    
     </main>
+    <footer class="footer">
+        <ul class="footer__social-iconslist">
+            <li class="social-iconslist__item"><a href="dribbble" class="socialicon-dribbble__link"><span class="visually-hidden">Профиль компании в Dribbble</span></a></li>
+            <li class="social-iconslist__item"><a href="pinterest" class="socialicon-pinterest__link"><span class="visually-hidden">Профиль компании в Pinterest</span></a></li>
+            <li class="social-iconslist__item"><a href="tumblr" class="socialicon-tumblr__link"><span class="visually-hidden">Профиль компании в Tumblr</span></a></li>
+          </ul>
+          <div class="footer__copyrights">
+            <a href="#0" class="footer__copyrights-link">Copyright © 2009-2019 City Blog LLC.</a>
+          </div>
+    </footer>
 </body>
 </html>
