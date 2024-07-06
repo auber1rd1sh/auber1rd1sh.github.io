@@ -84,7 +84,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 333px;
     z-index: 5;
     margin: 0 auto;
-    top: 55px;
     padding-block: 28px;
     padding-inline: 25px;
 }
@@ -570,6 +569,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
 }
   
 .search-form__field {
@@ -582,7 +582,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 13px;
     color: #787a79;
     border: none;
-    margin-top: 60px;
 }
   
 .search-form__button {
@@ -595,7 +594,6 @@ h1, h2, h3, h4, h5, h6 {
     background-size: 18px 18px;
     background-position: center center;
     border: none;
-    margin-top: 60px;
 }
   
 .search-form__field:focus {
@@ -644,6 +642,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #787a79;
     border: none;
     position: relative;
+    width: 100%;
 }
   
 .subscribe-form__field:focus {
@@ -662,6 +661,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     color: var(--color-light);
     margin-top: 17px;
+    width: 100%;
 }
   
 .subscribe-form__button:hover {
@@ -856,10 +856,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .rub {
     vertical-align: middle;
-	border-bottom: 0.07em solid;
+	border-bottom: 0.09em solid;
 	line-height: 0.2em;
 	display: inline-block;
 	width: 0.5em;
+    padding-bottom: 0.08em;
 }
 
 .product__button {
@@ -994,7 +995,6 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
     .popup__content {
         width: 390px;
-        top: 235px;
         padding-block: 50px;
         padding-inline: 30px;
     }
